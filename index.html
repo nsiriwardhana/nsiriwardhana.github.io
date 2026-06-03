@@ -3,78 +3,321 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nipuni Siriwardhana Portfolio</title>
-
+    <title>Nipuni Siriwardhana | Data Science Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
+<nav class="navbar">
+    <div class="logo">NS</div>
+
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <button id="darkModeToggle" class="theme-toggle" title="Toggle dark/light mode">☀️</button>
+</nav>
+
+<header class="hero">
+    <div class="hero-text">
+        <p class="intro">Hello, I am</p>
         <h1>Nipuni Siriwardhana</h1>
-        <p>Data Science Undergraduate | Data Engineer | AI & Machine Learning Enthusiast</p>
 
-        <div class="buttons">
-            <a href="cv.pdf" target="_blank">Download CV</a>
-            <a href="https://github.com/nsiriwardhana" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/nipunisiriwardhana/" target="_blank">LinkedIn</a>
-        </div>
-    </header>
+        <h2>Data Science Undergraduate & Trainee Data Engineer</h2>
 
-    <section>
-        <h2>About Me</h2>
-
-        <p>
-            Final-year Data Science undergraduate with experience in
-            Machine Learning, Data Analytics, Microsoft Fabric,
-            Power BI, Python, SQL, and Data Engineering.
+        <p class="summary">
+            I build data-driven solutions using Python, SQL, Power BI,
+            Microsoft Fabric, machine learning, and business intelligence tools.
         </p>
-    </section>
 
-    <section>
-        <h2>Projects</h2>
+        <div class="hero-buttons">
+            <a href="cv.pdf" target="_blank" class="btn primary">Download CV</a>
+            <a href="#projects" class="btn secondary">View Projects</a>
+        </div>
+    </div>
+
+    <div class="hero-image">
+        <img src="images/Profile.jpg" alt="Nipuni Siriwardhana">
+    </div>
+</header>
+
+<main>
+
+<section id="about" class="section">
+    <div class="section-title">
+        <p>Profile</p>
+        <h2>About Me</h2>
+    </div>
+
+    <div class="about-grid">
+        <div>
+            <p>
+                I am a final-year Data Science undergraduate at SLIIT with hands-on
+                experience in data analytics, machine learning, and data engineering.
+                My work focuses on building useful data solutions with Python, SQL,
+                Power BI, Microsoft Fabric, REST APIs, and modern BI tools.
+            </p>
+
+            <p>
+                I have worked on data preprocessing, model development, dashboard
+                automation, forecasting, and data warehouse projects. I am interested
+                in AI, data engineering, business intelligence, and machine learning
+                solutions that support better decision-making.
+            </p>
+        </div>
+
+        <div class="about-cards">
+            <div class="info-card">
+                <h3>Current Role</h3>
+                <p>Trainee Data Engineer at SAS Creative</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Career Focus</h3>
+                <p>Data Engineering, AI/ML, BI, Data Analytics</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Core Tools</h3>
+                <p>Python, SQL, Power BI, Microsoft Fabric</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="section dark-section">
+    <div class="section-title">
+        <p>Work</p>
+        <h2>Experience</h2>
+    </div>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <h3>Trainee Data Engineer</h3>
+            <span>SAS Creative | Jun 2025 - Present | Onsite</span>
+            <p>
+                Supporting demand planning, data warehouse, and Power BI projects
+                for stock and sales reporting. Working with Microsoft Fabric,
+                medallion architecture, data pipelines, reporting models, and
+                dashboards for inventory movement, product performance, and sales trends.
+            </p>
+        </div>
+
+        <div class="timeline-item">
+            <h3>Intern Data Analyst</h3>
+            <span>Mobitel Head Office | Nov 2024 - May 2025 | Onsite</span>
+            <p>
+                Conducted time series analysis on telecom data, built automated
+                data pipelines, collected macroeconomic indicators using web scraping,
+                developed vegetable price forecasting models, and completed personnel
+                profile analysis to identify director-company relationships.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="section">
+    <div class="section-title">
+        <p>Portfolio</p>
+        <h2>Featured Projects</h2>
+    </div>
+
+    <div class="projects-grid">
 
         <div class="project-card">
-            <h3>AI Interview Training Voice Bot</h3>
-            <p>Voice-based AI interview preparation assistant using NLP and speech processing.</p>
+            <h3>AI-Powered Interview Training Voice Bot</h3>
+            <p>
+                Developed an AI-driven interview preparation system using
+                Retrieval-Augmented Generation to generate role-specific interview
+                questions from uploaded job descriptions.
+            </p>
+            <p>
+                Integrated Wav2Vec2 speech emotion recognition to analyze confidence
+                and emotional stability with an explainable feedback dashboard.
+            </p>
+
+            <div class="tags">
+                <span>Python</span>
+                <span>PyTorch</span>
+                <span>RAG</span>
+                <span>FAISS</span>
+                <span>Wav2Vec2</span>
+            </div>
         </div>
 
         <div class="project-card">
-            <h3>Cinnamon Leaf Disease Detection</h3>
-            <p>Deep learning solution for plant disease classification.</p>
+            <h3>Cinnamon Leaf Disease Detection Using CNN</h3>
+            <p>
+                Built a convolutional neural network model to detect and classify
+                diseases in cinnamon leaves using image data.
+            </p>
+            <p>
+                Applied preprocessing, data augmentation, and hyperparameter tuning
+                to improve classification performance.
+            </p>
+
+            <div class="tags">
+                <span>TensorFlow</span>
+                <span>Keras</span>
+                <span>OpenCV</span>
+                <span>CNN</span>
+            </div>
         </div>
 
         <div class="project-card">
             <h3>Vegetable Price Forecasting</h3>
-            <p>Time series forecasting using machine learning models.</p>
+            <p>
+                Built predictive models using historical vegetable prices and
+                economic indicators to forecast future prices.
+            </p>
+            <p>
+                Applied time-series methods including VAR, VECM, and ARDL.
+            </p>
+
+            <div class="tags">
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>Statsmodels</span>
+                <span>Forecasting</span>
+            </div>
         </div>
 
         <div class="project-card">
-            <h3>Microsoft Fabric Data Warehouse</h3>
-            <p>ETL pipelines, reporting, and business intelligence dashboards.</p>
+            <h3>Data Warehousing and Power BI Dashboard</h3>
+            <p>
+                Designed a snowflake-schema data warehouse using REST APIs, JSON,
+                Microsoft Fabric, and Power BI.
+            </p>
+            <p>
+                Built reporting dashboards for business analysis and operational insights.
+            </p>
+
+            <div class="tags">
+                <span>Microsoft Fabric</span>
+                <span>Power BI</span>
+                <span>REST API</span>
+                <span>SQL</span>
+            </div>
         </div>
 
-    </section>
+        <div class="project-card">
+            <h3>Company Director Extract Using NLP</h3>
+            <p>
+                Developed a web scraping and NLP tool to extract company director
+                names from CSE-listed company websites.
+            </p>
+            <p>
+                Analyzed director-company relationships to identify key influencers
+                for business opportunities.
+            </p>
 
-    <section>
-        <h2>Skills</h2>
+            <div class="tags">
+                <span>Python</span>
+                <span>BeautifulSoup</span>
+                <span>spaCy</span>
+                <span>Flask</span>
+            </div>
+        </div>
 
-        <ul>
-            <li>Python</li>
-            <li>SQL</li>
-            <li>Power BI</li>
-            <li>Microsoft Fabric</li>
-            <li>Machine Learning</li>
-            <li>TensorFlow</li>
-            <li>Data Engineering</li>
-        </ul>
-    </section>
+        <div class="project-card">
+            <h3>AI Blog Assistant</h3>
+            <p>
+                Developed a Streamlit-based AI web application to generate blog
+                posts based on user-provided titles and keywords.
+            </p>
+            <p>
+                Used generative AI to support content creation and topic-based writing.
+            </p>
 
-    <section>
-        <h2>Contact</h2>
+            <div class="tags">
+                <span>Python</span>
+                <span>Streamlit</span>
+                <span>Generative AI</span>
+            </div>
+        </div>
 
-        <p>Email: nssiriwardhana22@gmail.com</p>
-    </section>
+    </div>
+</section>
 
+<section id="skills" class="section dark-section">
+    <div class="section-title">
+        <p>Expertise</p>
+        <h2>Skills & Technologies</h2>
+    </div>
+
+    <div class="skills-grid">
+        <div class="skill-box">Python</div>
+        <div class="skill-box">SQL</div>
+        <div class="skill-box">Power BI</div>
+        <div class="skill-box">Microsoft Fabric</div>
+        <div class="skill-box">Machine Learning</div>
+        <div class="skill-box">TensorFlow</div>
+        <div class="skill-box">Keras</div>
+        <div class="skill-box">NLP</div>
+        <div class="skill-box">REST API</div>
+        <div class="skill-box">Data Pipelines</div>
+        <div class="skill-box">SSIS</div>
+        <div class="skill-box">SSAS</div>
+        <div class="skill-box">MySQL</div>
+        <div class="skill-box">GitHub</div>
+        <div class="skill-box">AWS</div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <div class="section-title">
+        <p>Connect</p>
+        <h2>Contact Me</h2>
+    </div>
+
+    <div class="contact-container">
+        <form id="contactForm" class="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="btn primary">Send Message</button>
+        </form>
+
+        <div id="successMessage" class="success-message" style="display: none;">
+            <h3>✓ Message Sent!</h3>
+            <p>Thank you! I'll get back to you soon.</p>
+        </div>
+
+        <div class="contact-links">
+            <h3>Or connect with me here:</h3>
+            <div class="contact-box">
+                <a href="mailto:nssiriwardhana22@gmail.com">📧 Email</a>
+                <a href="https://github.com/nsiriwardhana" target="_blank">💻 GitHub</a>
+                <a href="https://www.linkedin.com/in/nipunisiriwardhana/" target="_blank">💼 LinkedIn</a>
+                <a href="https://medium.com/@nipunisiriwardhana" target="_blank">📝 Medium</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 Nipuni Siriwardhana. All rights reserved.</p>
+</footer>
+
+<script src="scripts.js"></script>
 </body>
 </html>
