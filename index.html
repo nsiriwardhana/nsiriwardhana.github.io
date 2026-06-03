@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nipuni Siriwardhana | Data Science Portfolio</title>
+    <meta name="description" content="Nipuni Siriwardhana - Data Science Portfolio. AI/ML Engineer, Trainee Data Engineer, and Data Science Specialist.">
+    <meta name="keywords" content="Data Science, Machine Learning, Data Engineering, Portfolio, AI, Python, SQL, Power BI">
+    <title>Nipuni Siriwardhana | Data Science & AI Engineer Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- NAVIGATION BAR -->
 <nav class="navbar">
     <div class="logo">NS</div>
 
     <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#experience">Experience</a></li>
+        <li><a href="#highlights">Highlights</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 
@@ -93,7 +98,7 @@
 <section id="experience" class="section dark-section">
     <div class="section-title">
         <p>Work</p>
-        <h2>Experience</h2>
+        <h2>Professional Experience</h2>
     </div>
 
     <div class="timeline">
@@ -121,126 +126,246 @@
     </div>
 </section>
 
-<section id="projects" class="section">
+<!-- STATISTICS / HIGHLIGHTS SECTION -->
+<section id="highlights" class="section">
+    <div class="section-title">
+        <p>Overview</p>
+        <h2>Highlights</h2>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-number">Final Year</div>
+            <div class="stat-label">Data Science Student</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-number">Trainee</div>
+            <div class="stat-label">Data Engineer</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Projects Completed</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-number">7</div>
+            <div class="stat-label">Certifications</div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS SECTION -->
+<section id="projects" class="section dark-section">
     <div class="section-title">
         <p>Portfolio</p>
         <h2>Featured Projects</h2>
     </div>
 
     <div class="projects-grid">
-
+        <!-- Project 1 -->
         <div class="project-card">
-            <h3>AI-Powered Interview Training Voice Bot</h3>
-            <p>
-                Developed an AI-driven interview preparation system using
-                Retrieval-Augmented Generation to generate role-specific interview
-                questions from uploaded job descriptions.
-            </p>
-            <p>
-                Integrated Wav2Vec2 speech emotion recognition to analyze confidence
-                and emotional stability with an explainable feedback dashboard.
-            </p>
-
-            <div class="tags">
-                <span>Python</span>
-                <span>PyTorch</span>
-                <span>RAG</span>
-                <span>FAISS</span>
-                <span>Wav2Vec2</span>
+            <div class="project-image">
+                <img src="images/projects/voicebot.svg" alt="AI Voice Bot Interface">
+                <div class="project-overlay">
+                    <a href="#" class="project-btn github-btn">GitHub</a>
+                    <a href="#" class="project-btn demo-btn">Demo</a>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>AI-Powered Interview Training Voice Bot</h3>
+                <p>
+                    Developed an AI-driven interview preparation system using
+                    Retrieval-Augmented Generation to generate role-specific interview
+                    questions from uploaded job descriptions. Integrated Wav2Vec2 speech
+                    emotion recognition to analyze confidence and emotional stability.
+                </p>
+                <div class="tags">
+                    <span>Python</span>
+                    <span>PyTorch</span>
+                    <span>RAG</span>
+                    <span>FAISS</span>
+                    <span>Wav2Vec2</span>
+                </div>
             </div>
         </div>
 
+        <!-- Project 2 -->
         <div class="project-card">
-            <h3>Cinnamon Leaf Disease Detection Using CNN</h3>
-            <p>
-                Built a convolutional neural network model to detect and classify
-                diseases in cinnamon leaves using image data.
-            </p>
-            <p>
-                Applied preprocessing, data augmentation, and hyperparameter tuning
-                to improve classification performance.
-            </p>
-
-            <div class="tags">
-                <span>TensorFlow</span>
-                <span>Keras</span>
-                <span>OpenCV</span>
-                <span>CNN</span>
+            <div class="project-image">
+                <img src="images/projects/cinnamon.svg" alt="Disease Detection CNN">
+                <div class="project-overlay">
+                    <a href="#" class="project-btn github-btn">GitHub</a>
+                    <a href="#" class="project-btn demo-btn">Demo</a>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>Cinnamon Leaf Disease Detection Using CNN</h3>
+                <p>
+                    Built a convolutional neural network model to detect and classify
+                    diseases in cinnamon leaves using image data. Applied preprocessing,
+                    data augmentation, and hyperparameter tuning to achieve high
+                    classification accuracy.
+                </p>
+                <div class="tags">
+                    <span>TensorFlow</span>
+                    <span>Keras</span>
+                    <span>OpenCV</span>
+                    <span>CNN</span>
+                </div>
             </div>
         </div>
 
+        <!-- Project 3 -->
         <div class="project-card">
-            <h3>Vegetable Price Forecasting</h3>
-            <p>
-                Built predictive models using historical vegetable prices and
-                economic indicators to forecast future prices.
-            </p>
-            <p>
-                Applied time-series methods including VAR, VECM, and ARDL.
-            </p>
-
-            <div class="tags">
-                <span>Python</span>
-                <span>Pandas</span>
-                <span>Statsmodels</span>
-                <span>Forecasting</span>
+            <div class="project-image">
+                <img src="images/projects/forecasting.svg" alt="Price Forecasting">
+                <div class="project-overlay">
+                    <a href="#" class="project-btn github-btn">GitHub</a>
+                    <a href="#" class="project-btn demo-btn">Demo</a>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>Vegetable Price Forecasting</h3>
+                <p>
+                    Built predictive models using historical vegetable prices and
+                    economic indicators to forecast future prices. Applied advanced
+                    time series methods including VAR, VECM, and ARDL models.
+                </p>
+                <div class="tags">
+                    <span>Python</span>
+                    <span>Pandas</span>
+                    <span>Statsmodels</span>
+                    <span>Forecasting</span>
+                </div>
             </div>
         </div>
 
+        <!-- Project 4 -->
         <div class="project-card">
-            <h3>Data Warehousing and Power BI Dashboard</h3>
-            <p>
-                Designed a snowflake-schema data warehouse using REST APIs, JSON,
-                Microsoft Fabric, and Power BI.
-            </p>
-            <p>
-                Built reporting dashboards for business analysis and operational insights.
-            </p>
-
-            <div class="tags">
-                <span>Microsoft Fabric</span>
-                <span>Power BI</span>
-                <span>REST API</span>
-                <span>SQL</span>
+            <div class="project-image">
+                <img src="images/projects/fabric.svg" alt="Data Warehouse Dashboard">
+                <div class="project-overlay">
+                    <a href="#" class="project-btn github-btn">GitHub</a>
+                    <a href="#" class="project-btn demo-btn">Demo</a>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>Data Warehousing and Power BI Dashboard</h3>
+                <p>
+                    Designed a snowflake-schema data warehouse using REST APIs, JSON,
+                    Microsoft Fabric, and Power BI. Built comprehensive reporting
+                    dashboards for business analysis and operational insights.
+                </p>
+                <div class="tags">
+                    <span>Microsoft Fabric</span>
+                    <span>Power BI</span>
+                    <span>REST API</span>
+                    <span>SQL</span>
+                </div>
             </div>
         </div>
 
+        <!-- Project 5 -->
         <div class="project-card">
-            <h3>Company Director Extract Using NLP</h3>
-            <p>
-                Developed a web scraping and NLP tool to extract company director
-                names from CSE-listed company websites.
-            </p>
-            <p>
-                Analyzed director-company relationships to identify key influencers
-                for business opportunities.
-            </p>
-
-            <div class="tags">
-                <span>Python</span>
-                <span>BeautifulSoup</span>
-                <span>spaCy</span>
-                <span>Flask</span>
+            <div class="project-image">
+                <img src="images/projects/director-nlp.svg" alt="NLP Director Extraction">
+                <div class="project-overlay">
+                    <a href="#" class="project-btn github-btn">GitHub</a>
+                    <a href="#" class="project-btn demo-btn">Demo</a>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>Company Director Extract Using NLP</h3>
+                <p>
+                    Developed a web scraping and NLP tool to extract company director
+                    names from CSE-listed company websites. Analyzed director-company
+                    relationships to identify key influencers for strategic partnerships.
+                </p>
+                <div class="tags">
+                    <span>Python</span>
+                    <span>BeautifulSoup</span>
+                    <span>spaCy</span>
+                    <span>Flask</span>
+                </div>
             </div>
         </div>
 
+        <!-- Project 6 -->
         <div class="project-card">
-            <h3>AI Blog Assistant</h3>
-            <p>
-                Developed a Streamlit-based AI web application to generate blog
-                posts based on user-provided titles and keywords.
-            </p>
-            <p>
-                Used generative AI to support content creation and topic-based writing.
-            </p>
-
-            <div class="tags">
-                <span>Python</span>
-                <span>Streamlit</span>
-                <span>Generative AI</span>
+            <div class="project-image">
+                <img src="images/projects/blogbot.svg" alt="AI Blog Assistant">
+                <div class="project-overlay">
+                    <a href="#" class="project-btn github-btn">GitHub</a>
+                    <a href="#" class="project-btn demo-btn">Demo</a>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>AI Blog Assistant</h3>
+                <p>
+                    Developed a Streamlit-based AI web application to generate blog
+                    posts based on user-provided titles and keywords. Leveraged generative
+                    AI to support content creation and topic-based writing workflows.
+                </p>
+                <div class="tags">
+                    <span>Python</span>
+                    <span>Streamlit</span>
+                    <span>Generative AI</span>
+                </div>
             </div>
         </div>
 
+        <!-- Project 7 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="images/projects/forecasting-system.svg" alt="Demand Forecasting">
+                <div class="project-overlay">
+                    <a href="#" class="project-btn github-btn">GitHub</a>
+                    <a href="#" class="project-btn demo-btn">Demo</a>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>Enterprise Demand Forecasting System</h3>
+                <p>
+                    Built forecasting solutions using Prophet, XGBoost, Theta, and
+                    TSB models to predict demand and support inventory planning.
+                    Implemented ensemble methods for improved accuracy.
+                </p>
+                <div class="tags">
+                    <span>Python</span>
+                    <span>Prophet</span>
+                    <span>XGBoost</span>
+                    <span>Forecasting</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 8 -->
+        <div class="project-card">
+            <div class="project-image">
+                <img src="images/projects/inventory-platform.svg" alt="Inventory Analytics">
+                <div class="project-overlay">
+                    <a href="#" class="project-btn github-btn">GitHub</a>
+                    <a href="#" class="project-btn demo-btn">Demo</a>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>Enterprise Inventory Analytics Platform</h3>
+                <p>
+                    Developed inventory analytics and reporting solutions using
+                    Microsoft Fabric, REST APIs, Power BI, and ETL pipelines.
+                    Designed dashboards for real-time inventory visibility.
+                </p>
+                <div class="tags">
+                    <span>Microsoft Fabric</span>
+                    <span>Power BI</span>
+                    <span>REST API</span>
+                    <span>ETL</span>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 </section>
 
@@ -269,44 +394,222 @@
     </div>
 </section>
 
+<!-- EDUCATION SECTION -->
+<section id="education" class="section">
+    <div class="section-title">
+        <p>Background</p>
+        <h2>Education</h2>
+    </div>
+
+    <div class="education-timeline">
+        <!-- Primary Education -->
+        <div class="education-item">
+            <div class="education-marker"></div>
+            <div class="education-content">
+                <div class="education-header">
+                    <h3>Sri Lanka Institute of Information Technology (SLIIT)</h3>
+                    <span class="education-year">2022 - 2026</span>
+                </div>
+                <p class="education-degree">BSc (Hons) Information Technology</p>
+                <p class="education-specialization">Specialization: Data Science</p>
+                <p class="education-description">
+                    Final-year undergraduate program with focus on data science, machine learning, 
+                    and advanced data analytics. Completed projects in AI/ML, data engineering, and business intelligence.
+                </p>
+            </div>
+        </div>
+
+        <!-- Secondary Education -->
+        <div class="education-item">
+            <div class="education-marker"></div>
+            <div class="education-content">
+                <div class="education-header">
+                    <h3>Ferguson High School, Rathnapura</h3>
+                    <span class="education-year">2012 - 2020</span>
+                </div>
+                <p class="education-degree">G.C.E Advanced Level</p>
+                <p class="education-specialization">Stream: Science (Mathematics, Physics, Chemistry)</p>
+                <p class="education-description">
+                    Strong foundation in physical sciences and mathematics with consistent academic performance.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CERTIFICATIONS SECTION -->
+<section id="certifications" class="section dark-section">
+    <div class="section-title">
+        <p>Credentials</p>
+        <h2>Certifications & Achievements</h2>
+    </div>
+
+    <div class="certifications-grid">
+        <div class="cert-card">
+            <div class="cert-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L15.09 8.26H22L17.45 12.79L19.54 19.08L12 14.55L4.46 19.08L6.55 12.79L2 8.26H8.91L12 2Z"></path>
+                </svg>
+            </div>
+            <h3>AI / ML Engineer Stage 1</h3>
+            <p class="cert-issuer">SLIIT</p>
+            <p class="cert-year">2024</p>
+        </div>
+
+        <div class="cert-card">
+            <div class="cert-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L15.09 8.26H22L17.45 12.79L19.54 19.08L12 14.55L4.46 19.08L6.55 12.79L2 8.26H8.91L12 2Z"></path>
+                </svg>
+            </div>
+            <h3>AI / ML Engineer Stage 2</h3>
+            <p class="cert-issuer">SLIIT</p>
+            <p class="cert-year">2024</p>
+        </div>
+
+        <div class="cert-card">
+            <div class="cert-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L15.09 8.26H22L17.45 12.79L19.54 19.08L12 14.55L4.46 19.08L6.55 12.79L2 8.26H8.91L12 2Z"></path>
+                </svg>
+            </div>
+            <h3>Data Science Foundation</h3>
+            <p class="cert-issuer">Great Learning</p>
+            <p class="cert-year">2024</p>
+        </div>
+
+        <div class="cert-card">
+            <div class="cert-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L15.09 8.26H22L17.45 12.79L19.54 19.08L12 14.55L4.46 19.08L6.55 12.79L2 8.26H8.91L12 2Z"></path>
+                </svg>
+            </div>
+            <h3>Python Basic</h3>
+            <p class="cert-issuer">HackerRank</p>
+            <p class="cert-year">2024</p>
+        </div>
+
+        <div class="cert-card">
+            <div class="cert-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L15.09 8.26H22L17.45 12.79L19.54 19.08L12 14.55L4.46 19.08L6.55 12.79L2 8.26H8.91L12 2Z"></path>
+                </svg>
+            </div>
+            <h3>Power BI for Beginners</h3>
+            <p class="cert-issuer">Simplilearn</p>
+            <p class="cert-year">2024</p>
+        </div>
+
+        <div class="cert-card">
+            <div class="cert-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L15.09 8.26H22L17.45 12.79L19.54 19.08L12 14.55L4.46 19.08L6.55 12.79L2 8.26H8.91L12 2Z"></path>
+                </svg>
+            </div>
+            <h3>Introduction to Data Analytics</h3>
+            <p class="cert-issuer">Simplilearn</p>
+            <p class="cert-year">2024</p>
+        </div>
+
+        <div class="cert-card">
+            <div class="cert-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L15.09 8.26H22L17.45 12.79L19.54 19.08L12 14.55L4.46 19.08L6.55 12.79L2 8.26H8.91L12 2Z"></path>
+                </svg>
+            </div>
+            <h3>AWS Academy Cloud Foundations</h3>
+            <p class="cert-issuer">AWS Academy</p>
+            <p class="cert-year">In Progress</p>
+        </div>
+    </div>
+</section>
+
 <section id="contact" class="section">
     <div class="section-title">
         <p>Connect</p>
-        <h2>Contact Me</h2>
+        <h2>Get In Touch</h2>
     </div>
 
     <div class="contact-container">
+        <!-- Contact Form -->
         <form id="contactForm" class="contact-form">
             <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
             </div>
 
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Message subject" required>
             </div>
 
             <div class="form-group">
                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <textarea id="message" name="message" placeholder="Your message..." rows="5" required></textarea>
             </div>
 
             <button type="submit" class="btn primary">Send Message</button>
         </form>
 
         <div id="successMessage" class="success-message" style="display: none;">
-            <h3>✓ Message Sent!</h3>
-            <p>Thank you! I'll get back to you soon.</p>
+            <div class="success-icon">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                </svg>
+            </div>
+            <h3>Message Sent Successfully!</h3>
+            <p>Thank you for reaching out. I'll get back to you soon.</p>
         </div>
 
-        <div class="contact-links">
-            <h3>Or connect with me here:</h3>
-            <div class="contact-box">
-                <a href="mailto:nssiriwardhana22@gmail.com">📧 Email</a>
-                <a href="https://github.com/nsiriwardhana" target="_blank">💻 GitHub</a>
-                <a href="https://www.linkedin.com/in/nipunisiriwardhana/" target="_blank">💼 LinkedIn</a>
-                <a href="https://medium.com/@nipunisiriwardhana" target="_blank">📝 Medium</a>
+        <!-- Contact Info Cards -->
+        <div class="contact-cards">
+            <h3>Alternative Contact Methods</h3>
+            <div class="cards-grid">
+                <a href="mailto:nssiriwardhana22@gmail.com" class="contact-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
+                    </div>
+                    <h4>Email</h4>
+                    <p>nssiriwardhana22@gmail.com</p>
+                </a>
+
+                <a href="https://www.linkedin.com/in/nipunisiriwardhana/" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path>
+                        </svg>
+                    </div>
+                    <h4>LinkedIn</h4>
+                    <p>Connect with me</p>
+                </a>
+
+                <a href="https://github.com/nsiriwardhana" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+                        </svg>
+                    </div>
+                    <h4>GitHub</h4>
+                    <p>View my projects</p>
+                </a>
+
+                <a href="https://medium.com/@nipunisiriwardhana" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42c1.87 0 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.59 0-1.06-2.27-1.07-5.25h-.02c0-2.99.48-5.51 1.07-5.54.66 0 1.19 2.58 1.19 5.75z"></path>
+                        </svg>
+                    </div>
+                    <h4>Medium</h4>
+                    <p>Read my articles</p>
+                </a>
             </div>
         </div>
     </div>
@@ -314,8 +617,40 @@
 
 </main>
 
-<footer>
-    <p>© 2026 Nipuni Siriwardhana. All rights reserved.</p>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Social</h4>
+            <ul>
+                <li><a href="https://github.com/nsiriwardhana" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/nipunisiriwardhana/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                <li><a href="https://medium.com/@nipunisiriwardhana" target="_blank" rel="noopener noreferrer">Medium</a></li>
+                <li><a href="mailto:nssiriwardhana22@gmail.com">Email</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Contact</h4>
+            <p>Email: nssiriwardhana22@gmail.com</p>
+            <p>Phone: +94 70 231 4718</p>
+            <p>Location: Malabe, Colombo, Sri Lanka</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 Nipuni Siriwardhana. All rights reserved.</p>
+        <p>Data Science | AI/ML Engineer | Trainee Data Engineer</p>
+    </div>
 </footer>
 
 <script src="scripts.js"></script>

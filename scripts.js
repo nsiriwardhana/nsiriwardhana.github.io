@@ -27,10 +27,14 @@ if (darkModeToggle) {
 // Smooth scroll for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const href = this.getAttribute('href');
+        // Only prevent default for internal links
+        if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         }
     });
 });
@@ -51,7 +55,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe all sections and cards
-document.querySelectorAll('section, .project-card, .timeline-item, .skill-box, .info-card').forEach(el => {
+document.querySelectorAll('section, .project-card, .timeline-item, .skill-box, .info-card, .stat-card, .cert-card').forEach(el => {
     observer.observe(el);
 });
 
@@ -65,17 +69,18 @@ if (contactForm) {
         const data = {
             name: formData.get('name'),
             email: formData.get('email'),
+            subject: formData.get('subject'),
             message: formData.get('message')
         };
 
         // Validate
-        if (!data.name || !data.email || !data.message) {
+        if (!data.name || !data.email || !data.subject || !data.message) {
             alert('Please fill in all fields');
             return;
         }
 
         if (!data.email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-            alert('Please enter a valid email');
+            alert('Please enter a valid email address');
             return;
         }
 
@@ -122,9 +127,9 @@ window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
     if (currentScroll <= 0) {
-        navbar.style.background = 'rgba(2, 6, 23, 0.9)';
-    } else {
         navbar.style.background = 'rgba(2, 6, 23, 0.95)';
+    } else {
+        navbar.style.background = 'rgba(2, 6, 23, 0.98)';
     }
 
     lastScroll = currentScroll;
@@ -133,9 +138,15 @@ window.addEventListener('scroll', () => {
 // Project card hover effect
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-8px)';
+        this.style.transition = 'all 0.3s ease';
     });
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0)';
-    });
+});
+
+// Smooth animations on page load
+window.addEventListener('load', () => {
+    // Add fade-in animation to hero section
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        hero.style.opacity = '1';
+    }
 });
