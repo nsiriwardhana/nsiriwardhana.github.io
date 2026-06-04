@@ -455,6 +455,9 @@ html[data-theme="light"] .navbar {
     border-left: 4px solid var(--accent-light);
     transition: all 0.3s ease;
     position: relative;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
 }
 
 .timeline-item::before {
@@ -491,6 +494,30 @@ html[data-theme="light"] .navbar {
 .timeline-item p {
     color: var(--text-secondary);
     line-height: 1.7;
+}
+
+.timeline-logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--card-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.timeline-logo img {
+    width: 72%;
+    height: 72%;
+    object-fit: contain;
+}
+
+.timeline-content {
+    flex: 1;
+    min-width: 0;
 }
 
 /* ============================================
@@ -722,102 +749,16 @@ html[data-theme="light"] .navbar {
    ============================================ */
 
 .education-timeline {
-    position: relative;
-    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     animation: fadeIn 0.8s ease-out;
 }
 
-.education-timeline::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 3px;
-    height: 100%;
-    background: linear-gradient(180deg, var(--accent-light), var(--accent), transparent);
-}
-
-.education-item {
-    margin-bottom: 40px;
-    display: flex;
-    gap: 30px;
-    animation: slideInLeft 0.6s ease-out backwards;
-}
-
-.education-item:nth-child(2) {
-    animation: slideInRight 0.6s ease-out 0.2s backwards;
-    flex-direction: row-reverse;
-}
-
-.education-marker {
-    position: relative;
-    width: 24px;
-    height: 24px;
-    background: var(--accent-light);
-    border-radius: 50%;
-    margin-top: 8px;
-    flex-shrink: 0;
-    border: 4px solid var(--bg-primary);
-    box-shadow: 0 0 0 3px var(--accent-light);
-}
-
-html[data-theme="light"] .education-marker {
-    border-color: white;
-}
-
-.education-content {
-    background: var(--card-bg);
-    padding: 28px;
-    border-radius: 12px;
-    border: 1px solid var(--card-border);
-    flex: 1;
-    transition: all 0.3s ease;
-}
-
-.education-content:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15);
-    border-color: var(--accent-light);
-}
-
-.education-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    gap: 20px;
-    margin-bottom: 12px;
-}
-
-.education-content h3 {
-    color: var(--text-primary);
-    font-size: 1.2rem;
-    font-weight: 700;
-}
-
-.education-year {
-    color: var(--accent-light);
-    font-weight: 600;
-    white-space: nowrap;
-    font-size: 0.95rem;
-}
-
-.education-degree {
-    color: var(--accent);
-    font-weight: 700;
-    margin-bottom: 8px;
-    font-size: 1.05rem;
-}
-
-.education-specialization {
+.education-item .education-specialization {
     color: var(--text-muted);
     font-weight: 600;
-    margin-bottom: 10px;
-    font-size: 0.95rem;
-}
-
-.education-description {
-    color: var(--text-secondary);
-    line-height: 1.6;
+    margin: 10px 0 12px;
     font-size: 0.95rem;
 }
 
@@ -845,6 +786,32 @@ html[data-theme="light"] .education-marker {
     transform: translateY(-12px);
     box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15);
     border-color: var(--accent-light);
+}
+
+.cert-media {
+    width: 100%;
+    height: 160px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--card-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.cert-media img,
+.cert-media object {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cert-file {
+    color: var(--text-muted);
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .cert-icon {
@@ -1150,17 +1117,14 @@ html[data-theme="light"] .form-group textarea:focus {
         grid-template-columns: 1fr;
     }
 
-    .education-timeline::before {
-        left: 20px;
+    .timeline-item {
+        flex-direction: column;
+        gap: 16px;
     }
 
-    .education-item {
-        margin-left: 60px;
-    }
-
-    .education-item:nth-child(2) {
-        flex-direction: row;
-        margin-left: 60px;
+    .timeline-logo {
+        width: 52px;
+        height: 52px;
     }
 }
 
