@@ -10,6 +10,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 /* ============================================
@@ -358,6 +359,7 @@ html[data-theme="light"] .navbar {
     padding: 100px 10%;
     background: var(--bg-primary);
     transition: background-color 0.3s ease;
+    scroll-margin-top: 90px;
 }
 
 .dark-section {
@@ -450,7 +452,6 @@ html[data-theme="light"] .navbar {
     background: var(--card-bg);
     padding: 32px;
     border-radius: 12px;
-    border-left: 4px solid var(--accent-light);
     border: 1px solid var(--card-border);
     border-left: 4px solid var(--accent-light);
     transition: all 0.3s ease;
@@ -632,7 +633,8 @@ html[data-theme="light"] .navbar {
     transition: opacity 0.3s ease;
 }
 
-.project-card:hover .project-overlay {
+.project-card:hover .project-overlay,
+.project-card:focus-within .project-overlay {
     opacity: 1;
 }
 
@@ -665,6 +667,13 @@ html[data-theme="light"] .navbar {
 
 .demo-btn:hover {
     background: rgba(255, 255, 255, 0.9);
+}
+
+.disabled-btn {
+    background: rgba(255, 255, 255, 0.14);
+    color: rgba(255, 255, 255, 0.78);
+    cursor: not-allowed;
+    border-color: rgba(255, 255, 255, 0.45);
 }
 
 .project-content {
@@ -1136,21 +1145,24 @@ html[data-theme="light"] .form-group textarea:focus {
     }
 
     .nav-links {
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 5%;
-        right: 5%;
-        background: var(--bg-secondary);
-        padding: 15px;
-        border-radius: 12px;
+        order: 3;
+        flex: 0 0 100%;
+        justify-content: flex-start;
+        gap: 6px;
+        overflow-x: auto;
+        padding: 4px 0 2px;
+        scrollbar-width: none;
+    }
+
+    .nav-links::-webkit-scrollbar {
         display: none;
-        gap: 0;
     }
 
     .nav-links a {
-        padding: 12px;
+        padding: 10px 12px;
         border-radius: 8px;
+        white-space: nowrap;
+        font-size: 0.9rem;
     }
 
     .hero {
@@ -1225,6 +1237,16 @@ html[data-theme="light"] .form-group textarea:focus {
 @media (max-width: 600px) {
     .navbar {
         padding: 12px 4%;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 1.25rem;
+    }
+
+    .nav-links a {
+        padding: 8px 10px;
+        font-size: 0.85rem;
     }
 
     .hero {

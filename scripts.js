@@ -1,12 +1,41 @@
 // Dark Mode Toggle
 const darkModeToggle = document.getElementById('darkModeToggle');
 const htmlElement = document.documentElement;
+const navbar = document.querySelector('.navbar');
+const themeIcons = {
+    dark: '\u2600\uFE0F',
+    light: '\uD83C\uDF19'
+};
+
+function updateNavbarBackground() {
+    if (!navbar) return;
+
+    const isLightMode = htmlElement.getAttribute('data-theme') === 'light';
+    const isScrolled = window.pageYOffset > 0;
+
+    if (isLightMode) {
+        navbar.style.background = isScrolled
+            ? 'rgba(255, 255, 255, 0.98)'
+            : 'rgba(255, 255, 255, 0.95)';
+    } else {
+        navbar.style.background = isScrolled
+            ? 'rgba(2, 6, 23, 0.98)'
+            : 'rgba(2, 6, 23, 0.95)';
+    }
+}
 
 // Check for saved preference
 const savedMode = localStorage.getItem('darkMode');
 if (savedMode === 'light') {
     htmlElement.setAttribute('data-theme', 'light');
     if (darkModeToggle) darkModeToggle.textContent = '🌙';
+}
+
+updateNavbarBackground();
+if (darkModeToggle) {
+    darkModeToggle.textContent = htmlElement.getAttribute('data-theme') === 'light'
+        ? themeIcons.light
+        : themeIcons.dark;
 }
 
 if (darkModeToggle) {
@@ -21,6 +50,10 @@ if (darkModeToggle) {
             localStorage.setItem('darkMode', 'light');
             darkModeToggle.textContent = '🌙';
         }
+        darkModeToggle.textContent = currentMode === 'light'
+            ? themeIcons.dark
+            : themeIcons.light;
+        updateNavbarBackground();
     });
 }
 
@@ -62,7 +95,7 @@ document.querySelectorAll('section, .project-card, .timeline-item, .skill-box, .
 // Contact form handler
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
+    contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
         
         const formData = new FormData(contactForm);
@@ -84,17 +117,22 @@ if (contactForm) {
             return;
         }
 
-        // Show success message
+        const mailto = [
+            'mailto:nssiriwardhana22@gmail.com',
+            `?subject=${encodeURIComponent(data.subject)}`,
+            `&body=${encodeURIComponent(`Name: ${data.name}\nEmail: ${data.email}\n\n${data.message}`)}`
+        ].join('');
+
         const successMsg = document.getElementById('successMessage');
         contactForm.style.display = 'none';
         successMsg.style.display = 'block';
+        window.location.href = mailto;
 
-        // Reset after 3 seconds
         setTimeout(() => {
             contactForm.reset();
             contactForm.style.display = 'block';
             successMsg.style.display = 'none';
-        }, 3000);
+        }, 5000);
     });
 }
 
@@ -105,7 +143,6 @@ window.addEventListener('scroll', () => {
 
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
         if (pageYOffset >= sectionTop - 200) {
             current = section.getAttribute('id');
         }
@@ -120,19 +157,8 @@ window.addEventListener('scroll', () => {
 });
 
 // Navbar scroll effect
-let lastScroll = 0;
-const navbar = document.querySelector('.navbar');
-
 window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll <= 0) {
-        navbar.style.background = 'rgba(2, 6, 23, 0.95)';
-    } else {
-        navbar.style.background = 'rgba(2, 6, 23, 0.98)';
-    }
-
-    lastScroll = currentScroll;
+    updateNavbarBackground();
 });
 
 // Project card hover effect
