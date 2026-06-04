@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Construction Safety Monitor">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a" />
+      <stop offset="1" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2563eb" />
+      <stop offset="1" stop-color="#60a5fa" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" rx="28" fill="url(#bg)" />
+  <rect x="60" y="70" width="320" height="360" rx="20" fill="#0b1224" stroke="#1e293b" stroke-width="2" />
+  <rect x="420" y="70" width="320" height="360" rx="20" fill="#0b1224" stroke="#1e293b" stroke-width="2" />
+
+  <rect x="100" y="110" width="240" height="140" rx="16" fill="#111827" stroke="#1e293b" stroke-width="2" />
+  <rect x="460" y="110" width="240" height="140" rx="16" fill="#111827" stroke="#1e293b" stroke-width="2" />
+
+  <path d="M180 320l60-110 60 110" fill="none" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="240" cy="210" r="18" fill="url(#accent)" />
+
+  <path d="M520 200h120" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" />
+  <path d="M520 240h160" stroke="#334155" stroke-width="6" stroke-linecap="round" />
+  <path d="M520 280h120" stroke="#334155" stroke-width="6" stroke-linecap="round" />
+
+  <rect x="120" y="270" width="200" height="120" rx="18" fill="#111827" stroke="#1e293b" stroke-width="2" />
+  <path d="M160 320h120" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" />
+  <path d="M160 350h90" stroke="#334155" stroke-width="6" stroke-linecap="round" />
+
+  <rect x="470" y="280" width="200" height="100" rx="18" fill="#111827" stroke="#1e293b" stroke-width="2" />
+  <path d="M510 330h120" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" />
+</svg>

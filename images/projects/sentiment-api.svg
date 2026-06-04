@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Sentiment Analysis API">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0f172a" />
+      <stop offset="1" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2563eb" />
+      <stop offset="1" stop-color="#60a5fa" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" rx="28" fill="url(#bg)" />
+  <rect x="70" y="90" width="660" height="320" rx="22" fill="#0b1224" stroke="#1e293b" stroke-width="2" />
+
+  <rect x="110" y="130" width="260" height="220" rx="18" fill="#111827" stroke="#1e293b" stroke-width="2" />
+  <rect x="420" y="130" width="270" height="70" rx="16" fill="#111827" stroke="#1e293b" stroke-width="2" />
+  <rect x="420" y="220" width="270" height="130" rx="16" fill="#111827" stroke="#1e293b" stroke-width="2" />
+
+  <circle cx="200" cy="200" r="36" fill="url(#accent)" />
+  <circle cx="200" cy="270" r="36" fill="#334155" />
+  <circle cx="200" cy="340" r="36" fill="#0f172a" stroke="#334155" stroke-width="2" />
+
+  <path d="M460 175h190" stroke="url(#accent)" stroke-width="8" stroke-linecap="round" />
+  <path d="M460 260h150" stroke="#334155" stroke-width="6" stroke-linecap="round" />
+  <path d="M460 300h190" stroke="#334155" stroke-width="6" stroke-linecap="round" />
+</svg>
