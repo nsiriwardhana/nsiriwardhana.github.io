@@ -6,6 +6,11 @@ const themeIcons = {
     dark: '\u2600\uFE0F',
     light: '\uD83C\uDF19'
 };
+const emailConfig = {
+    publicKey: 'Ujxat-5WSipIgKAID',
+    serviceId: 'service_2mn9zbe',
+    templateId: 'template_7q3gb1n'
+};
 
 function updateNavbarBackground() {
     if (!navbar) return;
@@ -94,8 +99,14 @@ document.querySelectorAll('section, .project-card, .timeline-item, .skill-box, .
 
 // Contact form handler
 const contactForm = document.getElementById('contactForm');
+if (window.emailjs) {
+    emailjs.init({
+        publicKey: emailConfig.publicKey
+    });
+}
+
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         
         const formData = new FormData(contactForm);
@@ -117,22 +128,35 @@ if (contactForm) {
             return;
         }
 
-        const mailto = [
-            'mailto:nssiriwardhana22@gmail.com',
-            `?subject=${encodeURIComponent(data.subject)}`,
-            `&body=${encodeURIComponent(`Name: ${data.name}\nEmail: ${data.email}\n\n${data.message}`)}`
-        ].join('');
+        if (!window.emailjs) {
+            alert('Email service is not available right now. Please email me directly at nssiriwardhana22@gmail.com.');
+            return;
+        }
 
         const successMsg = document.getElementById('successMessage');
-        contactForm.style.display = 'none';
-        successMsg.style.display = 'block';
-        window.location.href = mailto;
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.textContent;
 
-        setTimeout(() => {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+
+        try {
+            await emailjs.send(emailConfig.serviceId, emailConfig.templateId, data);
             contactForm.reset();
-            contactForm.style.display = 'block';
-            successMsg.style.display = 'none';
-        }, 5000);
+            contactForm.style.display = 'none';
+            successMsg.style.display = 'block';
+
+            setTimeout(() => {
+                contactForm.style.display = 'block';
+                successMsg.style.display = 'none';
+            }, 5000);
+        } catch (error) {
+            console.error('EmailJS send failed:', error);
+            alert('Sorry, the message could not be sent. Please email me directly at nssiriwardhana22@gmail.com.');
+        } finally {
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText;
+        }
     });
 }
 
